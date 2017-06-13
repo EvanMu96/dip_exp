@@ -7,7 +7,7 @@ I = imread('lena.bmp');
 subplot(3,3,2);
 imshow(I);
 title('original image');
-matx = [+1 0 -1;+1 0 -1;+1 0 -1];
+matx = (1/3)*[+1 0 -1;+1 0 -1;+1 0 -1];
 maty = matx';
 vecx = double(reshape(matx, [1,9]));
 vecy = double(reshape(maty, [1,9]));
@@ -38,7 +38,7 @@ imshow(abs(IedgeY));
 title('edge on y'); 
 
 %% sobel operator
-matx = [+1 0 -1;+2 0 -2;+1 0 -1];
+matx = (1/3)*[+1 0 -1;+2 0 -2;+1 0 -1];
 maty = matx';
 vecx = double(reshape(matx, [1,9]));
 vecy = double(reshape(maty, [1,9]));
